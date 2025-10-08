@@ -59,7 +59,7 @@ export default function Home() {
     }
 
     return (
-    <div className="flex fle-col gap-y-10">
+    <div className="flex flex-col gap-y-10">
       <div className="p-4 flex flex-col gap-y-4">
         <Input 
           placeholder="name" 
