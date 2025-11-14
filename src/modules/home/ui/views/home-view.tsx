@@ -1,10 +1,10 @@
-"use client";
+// "use client";
 
-export const HomeView = () => {
-    return ( 
-        <div>
-          Home View
-        </div> 
-  );
-}
+// export const HomeView = () => {
+//     return ( 
+//         <div>
+//           Home View
+//         </div> 
+//   );
+// }
  
