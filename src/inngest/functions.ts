@@ -128,7 +128,7 @@ export const meetingsProcessing = inngest.createFunction(
         //         })
         //         .where(eq(meetings.id, event.data.meetingId));
         // })
-
+        
         const { output } = await summarizer.run(
             "Summarize the following transcript: " +
                 JSON.stringify(transcriptWithSpeakers)
@@ -141,7 +141,7 @@ export const meetingsProcessing = inngest.createFunction(
                     summary: (output[0] as TextMessage).content as string,
                     status: "completed",
                 })
-                .where(eq(meetings.id, event.data.meetingId));
+                .where(eq(meetings.id, event.data.meetingId))
         })
     },
 );

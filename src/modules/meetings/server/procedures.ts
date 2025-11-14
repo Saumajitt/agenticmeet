@@ -259,7 +259,6 @@ export const meetingsRouter = createTRPCRouter({
         .query(async ({ input, ctx }) => {
         const [existingMeeting] = await db
 
-        //TODO: Replace with actual meeting count
             .select({
                 ...getTableColumns(meetings),
                 agent: agents,
