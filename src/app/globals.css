@@ -64,16 +64,16 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-    /* Premium Gradients */
-      --gradient-primary: linear-gradient(135deg, oklch(0.6 0.15 250) 0%, oklch(0.5 0.2 280) 100%);
-      --gradient-success: linear-gradient(135deg, oklch(0.65 0.15 145) 0%, oklch(0.55 0.18 160) 100%);
-      --gradient-warning: linear-gradient(135deg, oklch(0.75 0.15 80) 0%, oklch(0.65 0.18 50) 100%);
-      --gradient-info: linear-gradient(135deg, oklch(0.6 0.12 230) 0%, oklch(0.5 0.15 210) 100%);
-    
-      /* Glassmorphism */
-      --glass-bg: oklch(1 0 0 / 0.7);
-      --glass-border: oklch(1 0 0 / 0.2);
-      --glass-shadow: 0 8px 32px oklch(0 0 0 / 0.1);
+  /* Premium Gradients */
+  --gradient-primary: linear-gradient(135deg, oklch(0.6 0.15 250) 0%, oklch(0.5 0.2 280) 100%);
+  --gradient-success: linear-gradient(135deg, oklch(0.65 0.15 145) 0%, oklch(0.55 0.18 160) 100%);
+  --gradient-warning: linear-gradient(135deg, oklch(0.75 0.15 80) 0%, oklch(0.65 0.18 50) 100%);
+  --gradient-info: linear-gradient(135deg, oklch(0.6 0.12 230) 0%, oklch(0.5 0.15 210) 100%);
+
+  /* Glassmorphism */
+  --glass-bg: oklch(1 0 0 / 0.7);
+  --glass-border: oklch(1 0 0 / 0.2);
+  --glass-shadow: 0 8px 32px oklch(0 0 0 / 0.1);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -112,7 +112,7 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
-/* Premium Gradients - Dark Mode */
+  /* Premium Gradients - Dark Mode */
   --gradient-primary: linear-gradient(135deg, oklch(0.5 0.2 270) 0%, oklch(0.4 0.25 290) 100%);
   --gradient-success: linear-gradient(135deg, oklch(0.55 0.18 155) 0%, oklch(0.45 0.2 170) 100%);
   --gradient-warning: linear-gradient(135deg, oklch(0.65 0.18 70) 0%, oklch(0.55 0.2 45) 100%);
@@ -141,6 +141,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -148,6 +149,7 @@
 
 
 @layer base {
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
@@ -317,52 +319,101 @@
   }
 }
 
-/* Stream Chat Dark Mode Overrides */
-.dark .str-chat {
-  --str-chat__background-color: var(--card);
-  --str-chat__primary-color: var(--primary);
-  --str-chat__message-textarea-background-color: hsl(var(--input));
-  --str-chat__own-message-bubble-background-color: hsl(var(--primary));
-  --str-chat__message-bubble-background-color: hsl(var(--muted));
-  --str-chat__message-bubble-color: hsl(var(--foreground));
-  --str-chat__channel-preview-hover-background: hsl(var(--accent));
-  --str-chat__cta-button-background-color: hsl(var(--primary));
-}
-
-.dark .str-chat__input-flat {
-  background: hsl(var(--card)) !important;
-  border-color: hsl(var(--border)) !important;
-}
-
-.dark .str-chat__textarea textarea {
-  background: hsl(var(--input)) !important;
+/* Stream Chat Dark Mode Overrides - Comprehensive */
+.dark .str-chat,
+.dark .str-chat__container {
+  background: transparent !important;
   color: hsl(var(--foreground)) !important;
 }
 
-.dark .str-chat__message-text-inner {
+.dark .str-chat__main-panel {
+  background: transparent !important;
+}
+
+/* Message bubbles - AI/Other users (left side) */
+.dark .str-chat__message-bubble {
   background: hsl(var(--muted)) !important;
   color: hsl(var(--foreground)) !important;
 }
 
-.dark .str-chat__message--me .str-chat__message-text-inner {
-  background: hsl(var(--primary)) !important;
-  color: hsl(var(--primary-foreground)) !important;
+.dark .str-chat__message-text {
+  color: hsl(var(--foreground)) !important;
 }
 
+.dark .str-chat__message-text p {
+  color: hsl(var(--foreground)) !important;
+}
+
+/* My messages (right side) */
+.dark .str-chat__message--me .str-chat__message-bubble {
+  background: hsl(var(--primary)) !important;
+  color: white !important;
+}
+
+.dark .str-chat__message--me .str-chat__message-text,
+.dark .str-chat__message--me .str-chat__message-text p {
+  color: white !important;
+}
+
+/* Message list container */
+.dark .str-chat__list,
+.dark .str-chat__message-list {
+  background: transparent !important;
+}
+
+/* Input area */
+.dark .str-chat__message-input {
+  background: hsl(var(--card)) !important;
+  border-top: 1px solid hsl(var(--border)) !important;
+}
+
+.dark .str-chat__input-flat {
+  background: hsl(var(--input)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+.dark .str-chat__textarea textarea {
+  background: transparent !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+.dark .str-chat__textarea textarea::placeholder {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+/* Send button */
 .dark .str-chat__send-button {
   background: hsl(var(--primary)) !important;
+  color: white !important;
 }
 
-.dark .str-chat__list {
-  background: hsl(var(--card)) !important;
+/* Timestamps and metadata */
+.dark .str-chat__message-data,
+.dark .str-chat__message-timestamp {
+  color: hsl(var(--muted-foreground)) !important;
 }
 
+/* Avatar */
+.dark .str-chat__avatar {
+  background: hsl(var(--muted)) !important;
+}
 
-/* Fix Stream Chat scroll */
+/* Scroll fix - let Stream Chat handle its own scrolling */
 .str-chat__list {
-  overflow-y: auto !important;
+  height: 100% !important;
+  max-height: none !important;
 }
 
-.str-chat__ul {
-  overflow-y: visible !important;
+.str-chat__main-panel {
+  height: 100% !important;
+}
+
+/* Date separators */
+.dark .str-chat__date-separator-line {
+  background: hsl(var(--border)) !important;
+}
+
+.dark .str-chat__date-separator-date {
+  color: hsl(var(--muted-foreground)) !important;
+  background: hsl(var(--card)) !important;
 }

@@ -63,7 +63,7 @@ export const ChatUI = ({
 
     if (!client) {
         return (
-            <LoadingState 
+            <LoadingState
                 title="Loading Chat"
                 description="This may take a few seconds"
             />
@@ -72,13 +72,11 @@ export const ChatUI = ({
 
 
     return (
-        <div className="bg-card rounded-lg border">
+        <div className="bg-card rounded-lg border h-[500px] flex flex-col">
             <Chat client={client}>
                 <Channel channel={channel}>
                     <Window>
-                        <div className="h-[calc(100vh-20rem)] overflow-y-auto">
-                            <MessageList />
-                        </div>
+                        <MessageList />
                         <MessageInput />
                     </Window>
                     <Thread />
