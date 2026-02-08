@@ -5,7 +5,7 @@ import  Link  from "next/link";
 import  Image from "next/image";
 import { cn } from "@/lib/utils";
 import { BotIcon, HomeIcon, StarIcon, VideoIcon } from "lucide-react";
-
+import { ThemeToggle } from "@/components/theme-toggle";
 import {
     Sidebar,
     SidebarContent,
@@ -123,7 +123,10 @@ export const DashboardSidebar = () => {
                 </SidebarContent>
                 <SidebarFooter className="text-white">
                     <DashboardTrial />
-                    <DashboardUserButton />
+                    <div className="flex items-center justify-between px-2">
+                        <DashboardUserButton />
+                        <ThemeToggle />
+                    </div>
                 </SidebarFooter>
         </Sidebar>
     )
