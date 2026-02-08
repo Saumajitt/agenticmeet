@@ -99,7 +99,7 @@ export const DashboardHomeView = () => {
                                         <img src={generateAvatarUri({ seed: agent.name, variant: "botttsNeutral" })} alt={agent.name} className="h-10 w-10 rounded-full" />
                                         <div className="flex-1 min-w-0">
                                             <p className="font-medium truncate">{agent.name}</p>
-                                            <p className="text-xs text-muted-foreground truncate">{agent.instructions.substring(0, 50)}...</p>
+                                            <p className="text-xs text-muted-foreground truncate">{agent.instructions ? (agent.instructions.length > 50 ? agent.instructions.substring(0, 50) + "..." : agent.instructions) : "No instructions"}</p>
                                         </div>
                                     </div>
                                 ))}

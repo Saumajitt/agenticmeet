@@ -18,7 +18,7 @@ const DashboardPage = async () => {
     }
 
     const queryClient = getQueryClient();
-    void queryClient.prefetchQuery(trpc.dashboard.getStats.queryOptions());
+    await queryClient.prefetchQuery(trpc.dashboard.getStats.queryOptions());
 
     return (
         <HydrationBoundary state={dehydrate(queryClient)}>

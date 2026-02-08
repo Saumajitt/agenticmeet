@@ -3,7 +3,7 @@ import { agents, meetings } from "@/db/schema";
 import { polarClient } from "@/lib/polar";
 import { MAX_FREE_AGENTS, MAX_FREE_MEETINGS } from "@/modules/premium/constants";
 import { createTRPCRouter, protectedProcedure } from "@/trpc/init";
-import { count, desc, eq } from "drizzle-orm";
+import { and, count, desc, eq } from "drizzle-orm";
 
 export const dashboardRouter = createTRPCRouter({
     getStats: protectedProcedure.query(async ({ ctx }) => {
@@ -42,9 +42,11 @@ export const dashboardRouter = createTRPCRouter({
             isPremium = false;
         }
 
-        const completedMeetings = recentMeetings.filter(
-            (m) => m.status === "completed" && m.summary
-        ).length;
+        const [completedStats] = await db
+            .select({ count: count(meetings.id) })
+            .from(meetings)
+            .where(and(eq(meetings.userId, userId), eq(meetings.status, "completed")));
+        const completedMeetings = completedStats.count;
 
         return {
             totalMeetings: meetingStats.count,
