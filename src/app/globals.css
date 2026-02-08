@@ -64,6 +64,16 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
+    /* Premium Gradients */
+      --gradient-primary: linear-gradient(135deg, oklch(0.6 0.15 250) 0%, oklch(0.5 0.2 280) 100%);
+      --gradient-success: linear-gradient(135deg, oklch(0.65 0.15 145) 0%, oklch(0.55 0.18 160) 100%);
+      --gradient-warning: linear-gradient(135deg, oklch(0.75 0.15 80) 0%, oklch(0.65 0.18 50) 100%);
+      --gradient-info: linear-gradient(135deg, oklch(0.6 0.12 230) 0%, oklch(0.5 0.15 210) 100%);
+    
+      /* Glassmorphism */
+      --glass-bg: oklch(1 0 0 / 0.7);
+      --glass-border: oklch(1 0 0 / 0.2);
+      --glass-shadow: 0 8px 32px oklch(0 0 0 / 0.1);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -132,4 +142,99 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+}
+
+
+/* Premium Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px oklch(0.6 0.15 250 / 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 20px oklch(0.6 0.15 250 / 0.8);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.animate-fade-in-up-1 {
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.animate-fade-in-up-2 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.animate-fade-in-up-3 {
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.animate-fade-in-up-4 {
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+/* Glass Card Effect */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-success {
+  background: var(--gradient-success);
+}
+
+.bg-gradient-warning {
+  background: var(--gradient-warning);
+}
+
+.bg-gradient-info {
+  background: var(--gradient-info);
+}
+
+/* Premium hover effect */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px oklch(0 0 0 / 0.15);
 }

@@ -34,14 +34,39 @@ export const DashboardHomeView = () => {
             </div>
 
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-                <StatsCard title="Total Meetings" value={data.totalMeetings} icon={VideoIcon} iconColor="text-blue-600" />
-                <StatsCard title="Active Agents" value={data.totalAgents} icon={BotIcon} iconColor="text-purple-600" />
-                <StatsCard title="Completed" value={data.completedMeetings} icon={CheckCircleIcon} iconColor="text-green-600" />
-                <StatsCard title="Plan" value={data.isPremium ? "Pro" : "Free"} icon={SparklesIcon} iconColor="text-amber-600" subtitle={data.isPremium ? "Unlimited" : "Upgrade for more"} />
+                <StatsCard
+                    title="Total Meetings"
+                    value={data.totalMeetings}
+                    icon={VideoIcon}
+                    variant="info"
+                    className="animate-fade-in-up animate-fade-in-up-1"
+                />
+                <StatsCard
+                    title="Active Agents"
+                    value={data.totalAgents}
+                    icon={BotIcon}
+                    variant="primary"
+                    className="animate-fade-in-up animate-fade-in-up-2"
+                />
+                <StatsCard
+                    title="Completed"
+                    value={data.completedMeetings}
+                    icon={CheckCircleIcon}
+                    variant="success"
+                    className="animate-fade-in-up animate-fade-in-up-3"
+                />
+                <StatsCard
+                    title="Plan"
+                    value={data.isPremium ? "Pro" : "Free"}
+                    icon={SparklesIcon}
+                    variant="warning"
+                    subtitle={data.isPremium ? "Unlimited" : "Upgrade for more"}
+                    className="animate-fade-in-up animate-fade-in-up-4"
+                />
             </div>
 
             {!data.isPremium && (
-                <Card>
+                <Card className="hover-lift">
                     <CardHeader><CardTitle className="text-lg">Usage</CardTitle></CardHeader>
                     <CardContent className="space-y-4">
                         <div className="space-y-2">
@@ -60,7 +85,7 @@ export const DashboardHomeView = () => {
             )}
 
             <div className="grid gap-6 lg:grid-cols-2">
-                <Card>
+                <Card className="hover-lift">
                     <CardHeader className="flex flex-row items-center justify-between">
                         <CardTitle className="text-lg">Recent Meetings</CardTitle>
                         <Button variant="ghost" size="sm" asChild><Link href="/meetings">View all<ArrowRightIcon className="h-4 w-4 ml-1" /></Link></Button>
@@ -84,7 +109,7 @@ export const DashboardHomeView = () => {
                     </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="hover-lift">
                     <CardHeader className="flex flex-row items-center justify-between">
                         <CardTitle className="text-lg">Your Agents</CardTitle>
                         <Button variant="ghost" size="sm" asChild><Link href="/agents">View all<ArrowRightIcon className="h-4 w-4 ml-1" /></Link></Button>
