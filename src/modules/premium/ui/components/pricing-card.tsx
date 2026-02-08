@@ -10,7 +10,7 @@ import { Separator } from "@/components/ui/separator";
 const pricingCardVariants = cva("rounded-lg p-4 py-6 w-full", {
     variants: {
         variant: {
-            default: "bg-white text-black",
+            default: "bg-card text-card-foreground",
             highlighted: "bg-linear-to-br from-[#093C23] to-[#051B16] text-white",
         },
     },
@@ -34,7 +34,7 @@ const pricingCardIconVariants = cva("size-5", {
 const pricingCardSecondaryTextVariants = cva("text-neutral-700", {
     variants: {
         variant: {
-            default: "text-neutral-700",
+            default: "text-muted-foreground",
             highlighted: "text-neutral-300",
         },
     },

@@ -34,11 +34,11 @@ const statusIconMap: Record<string, React.ElementType> = {
 };
 
 const statusColorMap: Record<string, string> = {
-    upcoming: "bg-yellow-500/20 text-yellow-700 border-yellow-500/30",
-    active: "bg-blue-500/20 text-blue-700 border-blue-500/30",
-    completed: "bg-emerald-500/20 text-emerald-700 border-emerald-500/30",
-    processing: "bg-gray-500/20 text-gray-700 border-gray-500/30",
-    cancelled: "bg-rose-500/20 text-rose-700 border-rose-500/30",
+    upcoming: "bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 border-yellow-500/30",
+    active: "bg-blue-500/20 text-blue-600 dark:text-blue-400 border-blue-500/30",
+    completed: "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
+    processing: "bg-gray-500/20 text-gray-600 dark:text-gray-300 border-gray-500/30",
+    cancelled: "bg-rose-500/20 text-rose-600 dark:text-rose-400 border-rose-500/30",
 };
 
 export const MeetingCard = ({
