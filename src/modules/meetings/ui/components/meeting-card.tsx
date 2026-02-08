@@ -11,7 +11,6 @@ import {
     ClockArrowUpIcon,
     ClockFadingIcon,
     LoaderIcon,
-    BotIcon,
 } from "lucide-react";
 import Link from "next/link";
 
