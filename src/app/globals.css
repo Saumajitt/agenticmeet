@@ -361,8 +361,8 @@
 .dark .str-chat__message-simple-text-inner,
 .dark [class*="str-chat__message-text"] {
   background: #374151 !important;
-  border-radius: 12px !important;
-  padding: 10px 14px !important;
+  border-radius: 8px !important;
+  padding: 6px 10px !important;
 }
 
 /* User's own messages - primary color bubble */
