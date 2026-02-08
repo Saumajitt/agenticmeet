@@ -75,8 +75,8 @@ export const DashboardSidebar = () => {
                                     <SidebarMenuButton
                                         asChild
                                         className={cn(
-                                            "h-10 hover:bg-linear-to-r/oklch border border-transparent hover:border-[#5D6B68]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50",
-                                            pathName === item.href && "bg-linear-to-r border-[#5D6B68]/10"
+                                            "h-10 sidebar-glow hover:bg-linear-to-r/oklch border border-transparent hover:border-[#5D6B68]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50 transition-all duration-300",
+                                            pathName === item.href && "bg-linear-to-r border-[#5D6B68]/10 sidebar-active-glow"
                                         )}
                                         isActive={pathName === item.href} 
                                     >
@@ -103,8 +103,8 @@ export const DashboardSidebar = () => {
                                     <SidebarMenuButton
                                         asChild
                                         className={cn(
-                                            "h-10 hover:bg-linear-to-r/oklch border border-transparent hover:border-[#5D6B68]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50",
-                                            pathName === item.href && "bg-linear-to-r border-[#5D6B68]/10"
+                                            "h-10 sidebar-glow hover:bg-linear-to-r/oklch border border-transparent hover:border-[#5D6B68]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50 transition-all duration-300",
+                                            pathName === item.href && "bg-linear-to-r border-[#5D6B68]/10 sidebar-active-glow"
                                         )}
                                         isActive={pathName === item.href} 
                                     >
