@@ -316,3 +316,43 @@
     transform: rotate(360deg);
   }
 }
+
+/* Stream Chat Dark Mode Overrides */
+.dark .str-chat {
+  --str-chat__background-color: var(--card);
+  --str-chat__primary-color: var(--primary);
+  --str-chat__message-textarea-background-color: hsl(var(--input));
+  --str-chat__own-message-bubble-background-color: hsl(var(--primary));
+  --str-chat__message-bubble-background-color: hsl(var(--muted));
+  --str-chat__message-bubble-color: hsl(var(--foreground));
+  --str-chat__channel-preview-hover-background: hsl(var(--accent));
+  --str-chat__cta-button-background-color: hsl(var(--primary));
+}
+
+.dark .str-chat__input-flat {
+  background: hsl(var(--card)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+.dark .str-chat__textarea textarea {
+  background: hsl(var(--input)) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+.dark .str-chat__message-text-inner {
+  background: hsl(var(--muted)) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+.dark .str-chat__message--me .str-chat__message-text-inner {
+  background: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+}
+
+.dark .str-chat__send-button {
+  background: hsl(var(--primary)) !important;
+}
+
+.dark .str-chat__list {
+  background: hsl(var(--card)) !important;
+}

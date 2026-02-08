@@ -76,12 +76,14 @@ export const CompletedState = ({ data }: Props) => {
                     <Transcript meetingId={data.id} />
                 </TabsContent>
                 <TabsContent value="recording">
-                    <div className="bg-card rounded-lg border px-4 py-5">
-                        <video
-                            src={data.recordingUrl!}
-                            className="w-full rounded-lg"
-                            controls
-                        />
+                    <div className="bg-card rounded-xl border p-6 shadow-sm">
+                        <div className="aspect-video bg-black rounded-lg overflow-hidden">
+                            <video
+                                src={data.recordingUrl!}
+                                className="w-full h-full object-contain"
+                                controls
+                            />
+                        </div>
                     </div>
                 </TabsContent>
                 <TabsContent value="summary">
