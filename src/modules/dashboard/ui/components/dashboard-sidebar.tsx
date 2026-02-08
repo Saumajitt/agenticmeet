@@ -4,7 +4,7 @@
 import  Link  from "next/link";
 import  Image from "next/image";
 import { cn } from "@/lib/utils";
-import { BotIcon, StarIcon, VideoIcon } from "lucide-react";
+import { BotIcon, HomeIcon, StarIcon, VideoIcon } from "lucide-react";
 
 import {
     Sidebar,
@@ -25,6 +25,11 @@ import { DashboardTrial } from "./dashboard-trial";
 
 
 const firstSection = [
+    {
+        icon: HomeIcon,
+        label: "Dashboard",
+        href: "/",
+    },
     {
         icon: VideoIcon,
         label: "Meetings",
