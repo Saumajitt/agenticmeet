@@ -356,3 +356,13 @@
 .dark .str-chat__list {
   background: hsl(var(--card)) !important;
 }
+
+
+/* Fix Stream Chat scroll */
+.str-chat__list {
+  overflow-y: auto !important;
+}
+
+.str-chat__ul {
+  overflow-y: visible !important;
+}
