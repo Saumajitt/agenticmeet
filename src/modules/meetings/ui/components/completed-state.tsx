@@ -26,7 +26,7 @@ export const CompletedState = ({ data }: Props) => {
     return (
         <div className="flex flex-col gap-y-4">
             <Tabs defaultValue="summary">
-                <div className="bg-white rounded-lg border px-3">
+                <div className="bg-card rounded-lg border px-3">
                     <ScrollArea>
                         <TabsList className="p-0 bg-background justify-start rounded-none h-13">
                             <TabsTrigger
@@ -76,7 +76,7 @@ export const CompletedState = ({ data }: Props) => {
                     <Transcript meetingId={data.id} />
                 </TabsContent>
                 <TabsContent value="recording">
-                    <div className="bg-white rounded-lg border px-4 py-5">
+                    <div className="bg-card rounded-lg border px-4 py-5">
                         <video
                             src={data.recordingUrl!}
                             className="w-full rounded-lg"
@@ -85,7 +85,7 @@ export const CompletedState = ({ data }: Props) => {
                     </div>
                 </TabsContent>
                 <TabsContent value="summary">
-                    <div className="bg-white rounded-lg border">
+                    <div className="bg-card rounded-lg border">
                         <div className="px-4 py-5 gap-y-5 flex flex-col col-span-5">
                             <h2 className="text-2xl font-medium capitalize">{data.name}</h2>
                             <div className="flex gap-x2 items-center">
@@ -146,7 +146,7 @@ export const CompletedState = ({ data }: Props) => {
                                         ),
                                         code: (props) => (
                                             <code
-                                                className="bg-gray-100 px-1 py-0.5 rounded"
+                                                className="bg-muted px-1 py-0.5 rounded"
                                                 {...props}
                                             />
                                         ),
