@@ -65,7 +65,7 @@ export const meetingsProcessing = inngest.createFunction(
                 .select()
                 .from(user)
                 .where(inArray(user.id, speakerIds))
-                .then((users) => 
+                .then((users) =>
                     users.map((user) => ({
                         ...user,
                     }))
@@ -76,72 +76,57 @@ export const meetingsProcessing = inngest.createFunction(
                 .select()
                 .from(agents)
                 .where(inArray(agents.id, speakerIds))
-                .then((agents) => 
+                .then((agents) =>
                     agents.map((agent) => ({
                         ...agent,
                     }))
                 );
 
 
-          const speakers = [...userSpeakers, ...agentSpeakers];  
-          
-          return transcript.map((item) => {
-            const speaker = speakers.find(
-                (speaker) => speaker.id === item.speaker_id
-            );
+            const speakers = [...userSpeakers, ...agentSpeakers];
 
-            if (!speaker) {
+            return transcript.map((item) => {
+                const speaker = speakers.find(
+                    (speaker) => speaker.id === item.speaker_id
+                );
+
+                if (!speaker) {
+                    return {
+                        ...item,
+                        user: {
+                            name: "Unknown",
+                        },
+                    };
+                }
+
                 return {
                     ...item,
                     user: {
-                        name: "Unknown",
+                        name: speaker.name,
                     },
                 };
-            }
-
-            return {
-                ...item,
-                user: {
-                    name: speaker.name,
-                },
-            };
-          });
+            });
         });
 
-        // const { output } = await step.run("run-summarizer-agent", async () => {
-        //     return summarizer.run(
-        //         "Summarize the following transcript: " +
-        //             JSON.stringify(transcriptWithSpeakers)
-        //     );
-        // });
-        
-        // // Ensure you cast output correctly as before
-        // const summaryContent = (output[0] as TextMessage).content as string;
-
-
-        // await step.run("save-summary", async () => {
-        //     await db
-        //         .update(meetings)
-        //         .set({
-        //             summary: summaryContent,
-        //             status: "completed",
-        //         })
-        //         .where(eq(meetings.id, event.data.meetingId));
-        // })
-        
-        const { output } = await summarizer.run(
-            "Summarize the following transcript: " +
+        // FIX: Extract ONLY the string content inside step.run() to avoid serialization issues
+        // The @inngest/agent-kit output object is not JSON-serializable, so we extract the string here
+        const summaryContent = await step.run("generate-summary", async () => {
+            const { output } = await summarizer.run(
+                "Summarize the following transcript: " +
                 JSON.stringify(transcriptWithSpeakers)
-        );
+            );
+            // Return only the serializable string, not the full output object
+            return (output[0] as TextMessage).content as string;
+        });
 
         await step.run("save-summary", async () => {
             await db
                 .update(meetings)
                 .set({
-                    summary: (output[0] as TextMessage).content as string,
+                    summary: summaryContent,
                     status: "completed",
                 })
-                .where(eq(meetings.id, event.data.meetingId))
+                .where(eq(meetings.id, event.data.meetingId));
         })
     },
 );
