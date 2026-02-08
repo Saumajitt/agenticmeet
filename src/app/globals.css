@@ -355,6 +355,24 @@
   color: white !important;
 }
 
+/* Chat bubbles - Add visible backgrounds */
+.dark .str-chat__message-bubble,
+.dark .str-chat__message-text-inner,
+.dark .str-chat__message-simple-text-inner,
+.dark [class*="str-chat__message-text"] {
+  background: #374151 !important;
+  border-radius: 12px !important;
+  padding: 10px 14px !important;
+}
+
+/* User's own messages - primary color bubble */
+.dark .str-chat__message--me .str-chat__message-bubble,
+.dark .str-chat__message--me .str-chat__message-text-inner,
+.dark .str-chat__message--me .str-chat__message-simple-text-inner,
+.dark .str-chat__message--me [class*="str-chat__message-text"] {
+  background: hsl(var(--primary)) !important;
+}
+
 /* Message list container */
 .dark .str-chat__list,
 .dark .str-chat__message-list {
