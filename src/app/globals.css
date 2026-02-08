@@ -417,3 +417,34 @@
   color: hsl(var(--muted-foreground)) !important;
   background: hsl(var(--card)) !important;
 }
+
+/* FORCE all text in Stream Chat to be readable in dark mode */
+.dark .str-chat * {
+  color: inherit;
+}
+
+.dark .str-chat p,
+.dark .str-chat span,
+.dark .str-chat div {
+  color: #e5e5e5 !important;
+}
+
+/* Override for message content specifically */
+.dark .str-chat__message-text-inner,
+.dark .str-chat__message-simple-text-inner,
+.dark [class*="str-chat__message"] p,
+.dark [class*="str-chat__message"] span:not(.str-chat__message-timestamp) {
+  color: #ffffff !important;
+}
+
+/* Keep timestamps muted */
+.dark .str-chat__message-timestamp,
+.dark [class*="timestamp"] {
+  color: #888888 !important;
+}
+
+/* User messages - keep primary color styling */
+.dark .str-chat__message--me [class*="text-inner"],
+.dark .str-chat__message--me p {
+  color: #ffffff !important;
+}
