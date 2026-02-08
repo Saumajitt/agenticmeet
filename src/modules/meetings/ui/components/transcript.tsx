@@ -26,7 +26,7 @@ export const Transcript = ({ meetingId }: Props) => {
     );    
 
     return (
-        <div className="bg-white rounded-lg border px-4 py-5 flex flex-col gap-y-4 w-full">
+        <div className="bg-card rounded-lg border px-4 py-5 flex flex-col gap-y-4 w-full">
         <p className="text-sm font-medium">Transcript</p>
             <div className="relative">
                 <Input 
@@ -63,8 +63,8 @@ export const Transcript = ({ meetingId }: Props) => {
                                     </p>
                                 </div>
                                 <Highlighter
-                                    className="text-sm text-neutral-700"
-                                    highlightClassName="bg-yellow-200"
+                                    className="text-sm text-muted-foreground"
+                                    highlightClassName="bg-yellow-300 dark:bg-yellow-500/40 text-foreground"
                                     searchWords={[searchQuery]}
                                     autoEscape={true}
                                     textToHighlight={item.text} 
