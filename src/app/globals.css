@@ -94,42 +94,42 @@
 }
 
 .dark {
-  /* Vision UI Color Palette */
-  --background: 222 47% 11%;
-  /* #0B1437 deep navy */
-  --foreground: 210 40% 98%;
+  /* Vision UI Color Palette - using oklch for consistency */
+  --background: oklch(0.15 0.03 250);
+  /* deep navy */
+  --foreground: oklch(0.95 0 0);
   /* white */
 
-  --card: 222 47% 15%;
+  --card: oklch(0.18 0.03 250);
   /* slightly lighter navy */
-  --card-foreground: 210 40% 98%;
+  --card-foreground: oklch(0.95 0 0);
 
-  --popover: 222 47% 13%;
-  --popover-foreground: 210 40% 98%;
+  --popover: oklch(0.16 0.03 250);
+  --popover-foreground: oklch(0.95 0 0);
 
   /* Primary - Cyan Blue */
-  --primary: 211 100% 50%;
+  --primary: oklch(0.6 0.2 250);
   /* #0075FF */
-  --primary-foreground: 210 40% 98%;
+  --primary-foreground: oklch(0.98 0 0);
 
   /* Secondary - Purple */
-  --secondary: 270 70% 50%;
+  --secondary: oklch(0.5 0.2 300);
   /* #7928CA */
-  --secondary-foreground: 210 40% 98%;
+  --secondary-foreground: oklch(0.98 0 0);
 
-  --muted: 222 47% 20%;
+  --muted: oklch(0.22 0.02 250);
   /* #1B254B */
-  --muted-foreground: 215 20% 65%;
+  --muted-foreground: oklch(0.65 0.02 250);
   /* #A0AEC0 */
 
-  --accent: 222 47% 25%;
-  --accent-foreground: 210 40% 98%;
+  --accent: oklch(0.25 0.02 250);
+  --accent-foreground: oklch(0.95 0 0);
 
-  --destructive: 0 84% 60%;
+  --destructive: oklch(0.55 0.25 30);
 
-  --border: 0 0% 100% / 10%;
-  --input: 0 0% 100% / 15%;
-  --ring: 211 100% 50%;
+  --border: oklch(0.3 0.02 250);
+  --input: oklch(0.35 0.02 250);
+  --ring: oklch(0.6 0.2 250);
 
   /* Vision UI Gradients */
   --gradient-primary: linear-gradient(135deg, #0075FF 0%, #7928CA 100%);
@@ -143,21 +143,21 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 
-  --chart-1: 211 100% 50%;
-  --chart-2: 160 84% 39%;
-  --chart-3: 270 70% 50%;
-  --chart-4: 38 92% 50%;
-  --chart-5: 0 84% 60%;
+  --chart-1: oklch(0.6 0.2 250);
+  --chart-2: oklch(0.6 0.15 160);
+  --chart-3: oklch(0.5 0.2 300);
+  --chart-4: oklch(0.75 0.15 80);
+  --chart-5: oklch(0.55 0.25 30);
 
   /* Sidebar - Vision UI Style */
-  --sidebar: 222 47% 11%;
-  --sidebar-foreground: 210 40% 98%;
-  --sidebar-primary: 211 100% 50%;
-  --sidebar-primary-foreground: 210 40% 98%;
-  --sidebar-accent: 222 47% 18%;
-  --sidebar-accent-foreground: 210 40% 98%;
-  --sidebar-border: 0 0% 100% / 10%;
-  --sidebar-ring: 211 100% 50%;
+  --sidebar: oklch(0.15 0.03 250);
+  --sidebar-foreground: oklch(0.95 0 0);
+  --sidebar-primary: oklch(0.6 0.2 250);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.25 0.03 250);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(0.3 0.02 250);
+  --sidebar-ring: oklch(0.6 0.2 250);
 }
 
 @layer base {
