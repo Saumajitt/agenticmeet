@@ -64,16 +64,16 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-    /* Premium Gradients */
-      --gradient-primary: linear-gradient(135deg, oklch(0.6 0.15 250) 0%, oklch(0.5 0.2 280) 100%);
-      --gradient-success: linear-gradient(135deg, oklch(0.65 0.15 145) 0%, oklch(0.55 0.18 160) 100%);
-      --gradient-warning: linear-gradient(135deg, oklch(0.75 0.15 80) 0%, oklch(0.65 0.18 50) 100%);
-      --gradient-info: linear-gradient(135deg, oklch(0.6 0.12 230) 0%, oklch(0.5 0.15 210) 100%);
-    
-      /* Glassmorphism */
-      --glass-bg: oklch(1 0 0 / 0.7);
-      --glass-border: oklch(1 0 0 / 0.2);
-      --glass-shadow: 0 8px 32px oklch(0 0 0 / 0.1);
+  /* Premium Gradients */
+  --gradient-primary: linear-gradient(135deg, oklch(0.6 0.15 250) 0%, oklch(0.5 0.2 280) 100%);
+  --gradient-success: linear-gradient(135deg, oklch(0.65 0.15 145) 0%, oklch(0.55 0.18 160) 100%);
+  --gradient-warning: linear-gradient(135deg, oklch(0.75 0.15 80) 0%, oklch(0.65 0.18 50) 100%);
+  --gradient-info: linear-gradient(135deg, oklch(0.6 0.12 230) 0%, oklch(0.5 0.15 210) 100%);
+
+  /* Glassmorphism */
+  --glass-bg: oklch(1 0 0 / 0.7);
+  --glass-border: oklch(1 0 0 / 0.2);
+  --glass-shadow: 0 8px 32px oklch(0 0 0 / 0.1);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -131,6 +131,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -138,6 +139,7 @@
 
 
 @layer base {
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
@@ -237,4 +239,63 @@
 .hover-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px oklch(0 0 0 / 0.15);
+}
+
+/* Vision UI Card Styling */
+.vision-card {
+  background: oklch(0.98 0 0);
+  border: 1px solid oklch(0.9 0 0);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.dark .vision-card {
+  background: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 0%, rgba(10, 14, 35, 0.69) 100%);
+  backdrop-filter: blur(120px);
+  border: 1px solid oklch(1 0 0 / 10%);
+}
+
+/* Stream Chat Dark Mode Overrides */
+.dark .str-chat,
+.dark .str-chat__container {
+  background: transparent !important;
+}
+
+.dark .str-chat__main-panel {
+  background: transparent !important;
+}
+
+.dark .str-chat__message-bubble {
+  background: oklch(0.25 0 0) !important;
+  color: oklch(0.95 0 0) !important;
+}
+
+.dark .str-chat__message-text,
+.dark .str-chat__message-text p {
+  color: oklch(0.95 0 0) !important;
+}
+
+.dark .str-chat__message--me .str-chat__message-bubble {
+  background: oklch(0.5 0.15 250) !important;
+  color: white !important;
+}
+
+.dark .str-chat__message--me .str-chat__message-text,
+.dark .str-chat__message--me .str-chat__message-text p {
+  color: white !important;
+}
+
+.dark .str-chat__message-input {
+  background: oklch(0.2 0 0) !important;
+  border-top: 1px solid oklch(1 0 0 / 10%) !important;
+}
+
+.dark .str-chat__textarea textarea {
+  background: transparent !important;
+  color: oklch(0.95 0 0) !important;
+}
+
+.dark .str-chat__send-button {
+  background: oklch(0.5 0.15 250) !important;
+  color: white !important;
 }
