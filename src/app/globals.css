@@ -239,26 +239,41 @@
   opacity: 0;
 }
 
-/* Vision UI Glass Card Effect */
-.glass-card {
+/* Vision UI Glass Card Effect - Dark Mode Only */
+.dark .glass-card {
   background: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 0%, rgba(10, 14, 35, 0.69) 100%);
   backdrop-filter: blur(120px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
-/* Vision UI Card with Glow */
+.glass-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Vision UI Card - Theme Aware */
 .vision-card {
-  background: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 0%, rgba(10, 14, 35, 0.69) 100%);
-  backdrop-filter: blur(120px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: white;
+  border: 1px solid #e5e7eb;
   border-radius: 20px;
   transition: all 0.3s ease;
 }
 
+.dark .vision-card {
+  background: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 0%, rgba(10, 14, 35, 0.69) 100%);
+  backdrop-filter: blur(120px);
+  border: none;
+}
+
 .vision-card:hover {
-  border-color: rgba(0, 117, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.dark .vision-card:hover {
   box-shadow: 0 0 30px rgba(0, 117, 255, 0.15);
 }
 
@@ -266,6 +281,7 @@
 .vision-gradient-card {
   background: linear-gradient(135deg, #0075FF 0%, #7928CA 100%);
   border-radius: 20px;
+  border: none;
   color: white;
 }
 

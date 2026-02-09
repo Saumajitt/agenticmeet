@@ -159,7 +159,7 @@ export const DashboardHomeView = () => {
                                 <Link
                                     key={meeting.id}
                                     href={`/meetings/${meeting.id}`}
-                                    className="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-[#0075FF]/30 transition-all"
+                                    className="flex items-center justify-between p-4 rounded-xl bg-muted/50 dark:bg-white/5 hover:bg-muted dark:hover:bg-white/10 border-0 transition-all"
                                 >
                                     <div className="flex items-center gap-3">
                                         <div className="p-2 rounded-lg bg-[#0075FF]/20">
@@ -203,7 +203,7 @@ export const DashboardHomeView = () => {
                                 <Link
                                     key={agent.id}
                                     href={`/agents/${agent.id}`}
-                                    className="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-[#7928CA]/30 transition-all"
+                                    className="flex items-center gap-4 p-4 rounded-xl bg-muted/50 dark:bg-white/5 hover:bg-muted dark:hover:bg-white/10 border-0 transition-all"
                                 >
                                     <img
                                         src={generateAvatarUri({ seed: agent.name, variant: "botttsNeutral" })}
