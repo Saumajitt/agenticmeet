@@ -75,7 +75,7 @@ export const AgentIdView = ({ agentId }: Props) => {
                     onEdit={() => setUpdateAgentDialogOpen(true)}
                     onRemove={handleRemoveAgent}
                 />
-                <div className="bg-card rounded-lg border">
+                <div className="vision-card border-0 p-6">
                     <div className="px-4 py-5 gap-y-5 flex flex-col col-span-5">
                         <div className="flex items-center gap-x-3">
                             <GeneratedAvatar

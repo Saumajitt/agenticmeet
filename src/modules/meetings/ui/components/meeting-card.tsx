@@ -53,7 +53,7 @@ export const MeetingCard = ({
 
     return (
         <Link href={`/meetings/${id}`}>
-            <Card className="hover-lift cursor-pointer group h-full">
+            <Card className="vision-card hover-lift cursor-pointer group h-full border-0">
                 <CardContent className="p-5 space-y-4">
                     <div className="flex items-start justify-between">
                         <div className="space-y-1 flex-1 min-w-0">

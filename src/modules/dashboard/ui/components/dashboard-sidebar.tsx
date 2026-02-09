@@ -1,8 +1,8 @@
 "use client";
 
 
-import  Link  from "next/link";
-import  Image from "next/image";
+import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { BotIcon, HomeIcon, StarIcon, VideoIcon } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -38,7 +38,7 @@ const firstSection = [
     {
         icon: BotIcon,
         label: "Agents",
-        href:"/agents",
+        href: "/agents",
     },
 ];
 
@@ -52,7 +52,7 @@ const secondSection = [
 
 export const DashboardSidebar = () => {
     const pathName = usePathname();
-    
+
 
 
     return (
@@ -64,7 +64,7 @@ export const DashboardSidebar = () => {
                 </Link>
             </SidebarHeader>
             <div className="px-4 py-2">
-                <Separator className="opacity-10 text-[#5D6B68]"/>
+                <Separator className="opacity-10 text-[#5D6B68]" />
             </div>
             <SidebarContent>
                 <SidebarGroup>
@@ -75,25 +75,25 @@ export const DashboardSidebar = () => {
                                     <SidebarMenuButton
                                         asChild
                                         className={cn(
-                                            "h-10 sidebar-glow hover:bg-linear-to-r/oklch border border-transparent hover:border-[#5D6B68]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50 transition-all duration-300",
-                                            pathName === item.href && "bg-linear-to-r border-[#5D6B68]/10 sidebar-active-glow"
+                                            "h-10 rounded-xl border border-transparent hover:bg-[#1B254B] hover:border-[#0075FF]/20 transition-all duration-300",
+                                            pathName === item.href && "bg-[#1B254B] border-[#0075FF]/30 shadow-[0_0_20px_rgba(0,117,255,0.15)]"
                                         )}
-                                        isActive={pathName === item.href} 
+                                        isActive={pathName === item.href}
                                     >
-                                    <Link href={item.href}>
-                                        <item.icon className="size-5" />
-                                        <span className="text-sm font-medium tracking-tight">
-                                            {item.label}
-                                        </span>
-                                    </Link>
-                                </SidebarMenuButton>
+                                        <Link href={item.href}>
+                                            <item.icon className="size-5" />
+                                            <span className="text-sm font-medium tracking-tight">
+                                                {item.label}
+                                            </span>
+                                        </Link>
+                                    </SidebarMenuButton>
                                 </SidebarMenuItem>
                             ))}
-                            </SidebarMenu>
+                        </SidebarMenu>
                     </SidebarGroupContent>
                 </SidebarGroup>
                 <div className="px-4 py-2">
-                    <Separator className="opacity-10 text-[#5D6B68]"/>
+                    <Separator className="opacity-10 text-[#5D6B68]" />
                 </div>
                 <SidebarGroup>
                     <SidebarGroupContent>
@@ -103,31 +103,31 @@ export const DashboardSidebar = () => {
                                     <SidebarMenuButton
                                         asChild
                                         className={cn(
-                                            "h-10 sidebar-glow hover:bg-linear-to-r/oklch border border-transparent hover:border-[#5D6B68]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50 transition-all duration-300",
-                                            pathName === item.href && "bg-linear-to-r border-[#5D6B68]/10 sidebar-active-glow"
+                                            "h-10 rounded-xl border border-transparent hover:bg-[#1B254B] hover:border-[#0075FF]/20 transition-all duration-300",
+                                            pathName === item.href && "bg-[#1B254B] border-[#0075FF]/30 shadow-[0_0_20px_rgba(0,117,255,0.15)]"
                                         )}
-                                        isActive={pathName === item.href} 
+                                        isActive={pathName === item.href}
                                     >
-                                    <Link href={item.href}>
-                                        <item.icon className="size-5" />
-                                        <span className="text-sm font-medium tracking-tight">
-                                            {item.label}
-                                        </span>
-                                    </Link>
-                                </SidebarMenuButton>
+                                        <Link href={item.href}>
+                                            <item.icon className="size-5" />
+                                            <span className="text-sm font-medium tracking-tight">
+                                                {item.label}
+                                            </span>
+                                        </Link>
+                                    </SidebarMenuButton>
                                 </SidebarMenuItem>
                             ))}
-                            </SidebarMenu>
+                        </SidebarMenu>
                     </SidebarGroupContent>
                 </SidebarGroup>
-                </SidebarContent>
-                <SidebarFooter className="text-white">
-                    <DashboardTrial />
-                    <div className="flex items-center justify-between px-2">
-                        <DashboardUserButton />
-                        <ThemeToggle />
-                    </div>
-                </SidebarFooter>
+            </SidebarContent>
+            <SidebarFooter className="text-white">
+                <DashboardTrial />
+                <div className="flex items-center justify-between px-2">
+                    <DashboardUserButton />
+                    <ThemeToggle />
+                </div>
+            </SidebarFooter>
         </Sidebar>
     )
 };

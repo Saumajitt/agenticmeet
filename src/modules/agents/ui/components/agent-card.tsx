@@ -21,7 +21,7 @@ export const AgentCard = ({
 }: AgentCardProps) => {
     return (
         <Link href={`/agents/${id}`}>
-            <Card className="hover-lift cursor-pointer group h-full">
+            <Card className="vision-card hover-lift cursor-pointer group h-full border-0">
                 <CardContent className="p-5 space-y-4">
                     <div className="flex items-start gap-4">
                         <div className="shrink-0">

@@ -94,47 +94,70 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  /* Premium Gradients - Dark Mode */
-  --gradient-primary: linear-gradient(135deg, oklch(0.5 0.2 270) 0%, oklch(0.4 0.25 290) 100%);
-  --gradient-success: linear-gradient(135deg, oklch(0.55 0.18 155) 0%, oklch(0.45 0.2 170) 100%);
-  --gradient-warning: linear-gradient(135deg, oklch(0.65 0.18 70) 0%, oklch(0.55 0.2 45) 100%);
-  --gradient-info: linear-gradient(135deg, oklch(0.5 0.15 240) 0%, oklch(0.4 0.18 220) 100%);
+  /* Vision UI Color Palette */
+  --background: 222 47% 11%;
+  /* #0B1437 deep navy */
+  --foreground: 210 40% 98%;
+  /* white */
 
-  /* Glassmorphism - Dark Mode */
-  --glass-bg: oklch(0.2 0 0 / 0.6);
-  --glass-border: oklch(1 0 0 / 0.1);
-  --glass-shadow: 0 8px 32px oklch(0 0 0 / 0.3);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --card: 222 47% 15%;
+  /* slightly lighter navy */
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222 47% 13%;
+  --popover-foreground: 210 40% 98%;
+
+  /* Primary - Cyan Blue */
+  --primary: 211 100% 50%;
+  /* #0075FF */
+  --primary-foreground: 210 40% 98%;
+
+  /* Secondary - Purple */
+  --secondary: 270 70% 50%;
+  /* #7928CA */
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 222 47% 20%;
+  /* #1B254B */
+  --muted-foreground: 215 20% 65%;
+  /* #A0AEC0 */
+
+  --accent: 222 47% 25%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 84% 60%;
+
+  --border: 0 0% 100% / 10%;
+  --input: 0 0% 100% / 15%;
+  --ring: 211 100% 50%;
+
+  /* Vision UI Gradients */
+  --gradient-primary: linear-gradient(135deg, #0075FF 0%, #7928CA 100%);
+  --gradient-success: linear-gradient(135deg, #01B574 0%, #0075FF 100%);
+  --gradient-warning: linear-gradient(135deg, #FFB547 0%, #FF6B6B 100%);
+  --gradient-info: linear-gradient(135deg, #7928CA 0%, #FF0080 100%);
+  --gradient-card: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 0%, rgba(10, 14, 35, 0.69) 100%);
+
+  /* Glassmorphism - Vision UI Style */
+  --glass-bg: rgba(15, 23, 42, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+  --chart-1: 211 100% 50%;
+  --chart-2: 160 84% 39%;
+  --chart-3: 270 70% 50%;
+  --chart-4: 38 92% 50%;
+  --chart-5: 0 84% 60%;
+
+  /* Sidebar - Vision UI Style */
+  --sidebar: 222 47% 11%;
+  --sidebar-foreground: 210 40% 98%;
+  --sidebar-primary: 211 100% 50%;
+  --sidebar-primary-foreground: 210 40% 98%;
+  --sidebar-accent: 222 47% 18%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-border: 0 0% 100% / 10%;
+  --sidebar-ring: 211 100% 50%;
 }
 
 @layer base {
@@ -216,12 +239,44 @@
   opacity: 0;
 }
 
-/* Glass Card Effect */
+/* Vision UI Glass Card Effect */
 .glass-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
+  background: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 0%, rgba(10, 14, 35, 0.69) 100%);
+  backdrop-filter: blur(120px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Vision UI Card with Glow */
+.vision-card {
+  background: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 0%, rgba(10, 14, 35, 0.69) 100%);
+  backdrop-filter: blur(120px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.vision-card:hover {
+  border-color: rgba(0, 117, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 117, 255, 0.15);
+}
+
+/* Vision UI Primary Gradient Card */
+.vision-gradient-card {
+  background: linear-gradient(135deg, #0075FF 0%, #7928CA 100%);
+  border-radius: 20px;
+  color: white;
+}
+
+/* Cyan Glow Effect */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 117, 255, 0.4);
+}
+
+/* Purple Glow Effect */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(121, 40, 202, 0.4);
 }
 
 /* Gradient Backgrounds */

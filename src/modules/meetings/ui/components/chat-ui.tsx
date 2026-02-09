@@ -72,7 +72,7 @@ export const ChatUI = ({
 
 
     return (
-        <div className="bg-card rounded-lg border h-[500px] flex flex-col">
+        <div className="vision-card border-0 h-[500px] flex flex-col overflow-hidden">
             <Chat client={client}>
                 <Channel channel={channel}>
                     <Window>

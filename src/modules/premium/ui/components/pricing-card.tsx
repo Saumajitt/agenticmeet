@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 
-const pricingCardVariants = cva("rounded-lg p-4 py-6 w-full", {
+const pricingCardVariants = cva("rounded-[20px] p-4 py-6 w-full", {
     variants: {
         variant: {
-            default: "bg-card text-card-foreground",
-            highlighted: "bg-linear-to-br from-[#093C23] to-[#051B16] text-white",
+            default: "vision-card border-0",
+            highlighted: "bg-gradient-to-br from-[#0075FF] to-[#7928CA] text-white",
         },
     },
     defaultVariants: {
@@ -22,7 +22,7 @@ const pricingCardVariants = cva("rounded-lg p-4 py-6 w-full", {
 const pricingCardIconVariants = cva("size-5", {
     variants: {
         variant: {
-            default: "fill-primary text-white",
+            default: "fill-[#0075FF] text-white",
             highlighted: "fill-white text-black",
         },
     },
@@ -112,7 +112,7 @@ export const PricingCard = ({
             </div>
             <div className="py-6">
                 <Separator className="opacity-10 text-[#5D6B68]" />
-            </div> 
+            </div>
             <Button
                 className="w-full"
                 size="lg"
@@ -120,7 +120,7 @@ export const PricingCard = ({
                 onClick={onClick}
             >
                 {buttonText}
-            </Button> 
+            </Button>
             <div className="flex flex-col gap-y-2 mt-6">
                 <p className="font-medium uppercase">Features</p>
                 <ul

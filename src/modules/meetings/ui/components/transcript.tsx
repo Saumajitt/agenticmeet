@@ -23,13 +23,13 @@ export const Transcript = ({ meetingId }: Props) => {
     const [searchQuery, setSearchQuery] = useState("");
     const filteredData = (data ?? []).filter((item) =>
         item.text.toString().toLowerCase().includes(searchQuery.toLowerCase())
-    );    
+    );
 
     return (
-        <div className="bg-card rounded-lg border px-4 py-5 flex flex-col gap-y-4 w-full">
-        <p className="text-sm font-medium">Transcript</p>
+        <div className="vision-card border-0 px-4 py-5 flex flex-col gap-y-4 w-full">
+            <p className="text-sm font-medium">Transcript</p>
             <div className="relative">
-                <Input 
+                <Input
                     placeholder="Search Transcript"
                     className="pl-7 h-9 w-60"
                     value={searchQuery}
@@ -48,9 +48,11 @@ export const Transcript = ({ meetingId }: Props) => {
                             >
                                 <div className="flex gap-x-2 items-center">
                                     <Avatar className="size-6">
-                                        <AvatarImage 
-                                            src={item.user.image ?? generateAvatarUri({ seed: item.user.name, variant:
-                                            "initials"})}
+                                        <AvatarImage
+                                            src={item.user.image ?? generateAvatarUri({
+                                                seed: item.user.name, variant:
+                                                    "initials"
+                                            })}
                                             alt="User Avatar"
                                         />
                                     </Avatar>
@@ -67,7 +69,7 @@ export const Transcript = ({ meetingId }: Props) => {
                                     highlightClassName="bg-yellow-300 dark:bg-yellow-500/40 text-foreground"
                                     searchWords={[searchQuery]}
                                     autoEscape={true}
-                                    textToHighlight={item.text} 
+                                    textToHighlight={item.text}
                                 />
                             </div>
                         )

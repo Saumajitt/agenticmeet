@@ -11,12 +11,22 @@ interface StatsCardProps {
     className?: string;
 }
 
+// Vision UI Style Variants
 const variantStyles = {
-    default: "bg-card",
-    primary: "bg-gradient-to-br from-violet-500 to-purple-600 text-white",
-    success: "bg-gradient-to-br from-emerald-500 to-teal-600 text-white",
-    warning: "bg-gradient-to-br from-amber-500 to-orange-600 text-white",
-    info: "bg-gradient-to-br from-blue-500 to-cyan-600 text-white",
+    default: "vision-card",
+    primary: "bg-gradient-to-br from-[#0075FF] to-[#7928CA] text-white",
+    success: "bg-gradient-to-br from-[#01B574] to-[#0075FF] text-white",
+    warning: "bg-gradient-to-br from-[#FFB547] to-[#FF6B6B] text-white",
+    info: "bg-gradient-to-br from-[#7928CA] to-[#FF0080] text-white",
+};
+
+// Vision UI Icon Background Colors
+const iconBgStyles = {
+    default: "bg-[#0075FF]",
+    primary: "bg-white/20",
+    success: "bg-white/20",
+    warning: "bg-white/20",
+    info: "bg-white/20",
 };
 
 export const StatsCard = ({
@@ -31,7 +41,7 @@ export const StatsCard = ({
 
     return (
         <Card className={cn(
-            "hover-lift overflow-hidden border-0",
+            "hover-lift overflow-hidden border-0 rounded-[20px]",
             variantStyles[variant],
             className
         )}>
@@ -55,10 +65,10 @@ export const StatsCard = ({
                         )}
                     </div>
                     <div className={cn(
-                        "p-3 rounded-full",
-                        isColored ? "bg-white/20" : "bg-muted"
+                        "p-3 rounded-xl",
+                        iconBgStyles[variant]
                     )}>
-                        <Icon className="h-6 w-6" />
+                        <Icon className="h-6 w-6 text-white" />
                     </div>
                 </div>
             </CardContent>
