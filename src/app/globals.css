@@ -64,16 +64,16 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-  /* Premium Gradients */
-  --gradient-primary: linear-gradient(135deg, oklch(0.6 0.15 250) 0%, oklch(0.5 0.2 280) 100%);
-  --gradient-success: linear-gradient(135deg, oklch(0.65 0.15 145) 0%, oklch(0.55 0.18 160) 100%);
-  --gradient-warning: linear-gradient(135deg, oklch(0.75 0.15 80) 0%, oklch(0.65 0.18 50) 100%);
-  --gradient-info: linear-gradient(135deg, oklch(0.6 0.12 230) 0%, oklch(0.5 0.15 210) 100%);
-
-  /* Glassmorphism */
-  --glass-bg: oklch(1 0 0 / 0.7);
-  --glass-border: oklch(1 0 0 / 0.2);
-  --glass-shadow: 0 8px 32px oklch(0 0 0 / 0.1);
+    /* Premium Gradients */
+      --gradient-primary: linear-gradient(135deg, oklch(0.6 0.15 250) 0%, oklch(0.5 0.2 280) 100%);
+      --gradient-success: linear-gradient(135deg, oklch(0.65 0.15 145) 0%, oklch(0.55 0.18 160) 100%);
+      --gradient-warning: linear-gradient(135deg, oklch(0.75 0.15 80) 0%, oklch(0.65 0.18 50) 100%);
+      --gradient-info: linear-gradient(135deg, oklch(0.6 0.12 230) 0%, oklch(0.5 0.15 210) 100%);
+    
+      /* Glassmorphism */
+      --glass-bg: oklch(1 0 0 / 0.7);
+      --glass-border: oklch(1 0 0 / 0.2);
+      --glass-shadow: 0 8px 32px oklch(0 0 0 / 0.1);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -94,77 +94,43 @@
 }
 
 .dark {
-  /* Vision UI Color Palette - using oklch for consistency */
-  --background: oklch(0.15 0.03 250);
-  /* deep navy */
-  --foreground: oklch(0.95 0 0);
-  /* white */
-
-  --card: oklch(0.18 0.03 250);
-  /* slightly lighter navy */
-  --card-foreground: oklch(0.95 0 0);
-
-  --popover: oklch(0.16 0.03 250);
-  --popover-foreground: oklch(0.95 0 0);
-
-  /* Primary - Cyan Blue */
-  --primary: oklch(0.6 0.2 250);
-  /* #0075FF */
-  --primary-foreground: oklch(0.98 0 0);
-
-  /* Secondary - Purple */
-  --secondary: oklch(0.5 0.2 300);
-  /* #7928CA */
-  --secondary-foreground: oklch(0.98 0 0);
-
-  --muted: oklch(0.22 0.02 250);
-  /* #1B254B */
-  --muted-foreground: oklch(0.65 0.02 250);
-  /* #A0AEC0 */
-
-  --accent: oklch(0.25 0.02 250);
-  --accent-foreground: oklch(0.95 0 0);
-
-  --destructive: oklch(0.55 0.25 30);
-
-  --border: oklch(0.3 0.02 250);
-  --input: oklch(0.35 0.02 250);
-  --ring: oklch(0.6 0.2 250);
-
-  /* Vision UI Gradients */
-  --gradient-primary: linear-gradient(135deg, #0075FF 0%, #7928CA 100%);
-  --gradient-success: linear-gradient(135deg, #01B574 0%, #0075FF 100%);
-  --gradient-warning: linear-gradient(135deg, #FFB547 0%, #FF6B6B 100%);
-  --gradient-info: linear-gradient(135deg, #7928CA 0%, #FF0080 100%);
-  --gradient-card: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 0%, rgba(10, 14, 35, 0.69) 100%);
-
-  /* Glassmorphism - Vision UI Style */
-  --glass-bg: rgba(15, 23, 42, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-
-  --chart-1: oklch(0.6 0.2 250);
-  --chart-2: oklch(0.6 0.15 160);
-  --chart-3: oklch(0.5 0.2 300);
-  --chart-4: oklch(0.75 0.15 80);
-  --chart-5: oklch(0.55 0.25 30);
-
-  /* Sidebar - Vision UI Style */
-  --sidebar: oklch(0.15 0.03 250);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.6 0.2 250);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.25 0.03 250);
-  --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.3 0.02 250);
-  --sidebar-ring: oklch(0.6 0.2 250);
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-
   body {
     @apply bg-background text-foreground;
   }
@@ -172,7 +138,6 @@
 
 
 @layer base {
-
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
@@ -239,60 +204,12 @@
   opacity: 0;
 }
 
-/* Vision UI Glass Card Effect - Dark Mode Only */
-.dark .glass-card {
-  background: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 0%, rgba(10, 14, 35, 0.69) 100%);
-  backdrop-filter: blur(120px);
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-}
-
+/* Glass Card Effect */
 .glass-card {
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 20px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
-}
-
-/* Vision UI Card - Theme Aware */
-.vision-card {
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-.dark .vision-card {
-  background: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 0%, rgba(10, 14, 35, 0.69) 100%);
-  backdrop-filter: blur(120px);
-  border: none;
-}
-
-.vision-card:hover {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.dark .vision-card:hover {
-  box-shadow: 0 0 30px rgba(0, 117, 255, 0.15);
-}
-
-/* Vision UI Primary Gradient Card */
-.vision-gradient-card {
-  background: linear-gradient(135deg, #0075FF 0%, #7928CA 100%);
-  border-radius: 20px;
-  border: none;
-  color: white;
-}
-
-/* Cyan Glow Effect */
-.glow-cyan {
-  box-shadow: 0 0 20px rgba(0, 117, 255, 0.4);
-}
-
-/* Purple Glow Effect */
-.glow-purple {
-  box-shadow: 0 0 20px rgba(121, 40, 202, 0.4);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
 }
 
 /* Gradient Backgrounds */
@@ -320,220 +237,4 @@
 .hover-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px oklch(0 0 0 / 0.15);
-}
-
-/* Sidebar glow effect */
-.sidebar-glow {
-  position: relative;
-}
-
-.sidebar-glow::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  background: radial-gradient(circle at center, oklch(0.5 0.15 170 / 0.3) 0%, transparent 70%);
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  border-radius: inherit;
-}
-
-.sidebar-glow:hover::before {
-  opacity: 1;
-}
-
-/* Active sidebar item glow */
-.sidebar-active-glow {
-  box-shadow: 0 0 15px oklch(0.5 0.15 170 / 0.4), inset 0 0 10px oklch(0.5 0.15 170 / 0.1);
-}
-
-/* Button ripple effect */
-.btn-ripple {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-ripple::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle, oklch(1 0 0 / 0.3) 10%, transparent 10.01%);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  transform: scale(10);
-  opacity: 0;
-  transition: transform 0.5s, opacity 0.5s;
-}
-
-.btn-ripple:active::after {
-  transform: scale(0);
-  opacity: 1;
-  transition: 0s;
-}
-
-/* Improved loading spinner */
-.spinner-glow {
-  animation: spin 1s linear infinite, pulse-glow 2s ease-in-out infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Stream Chat Dark Mode Overrides - Comprehensive */
-.dark .str-chat,
-.dark .str-chat__container {
-  background: transparent !important;
-  color: hsl(var(--foreground)) !important;
-}
-
-.dark .str-chat__main-panel {
-  background: transparent !important;
-}
-
-/* Message bubbles - AI/Other users (left side) */
-.dark .str-chat__message-bubble {
-  background: hsl(var(--muted)) !important;
-  color: hsl(var(--foreground)) !important;
-}
-
-.dark .str-chat__message-text {
-  color: hsl(var(--foreground)) !important;
-}
-
-.dark .str-chat__message-text p {
-  color: hsl(var(--foreground)) !important;
-}
-
-/* My messages (right side) */
-.dark .str-chat__message--me .str-chat__message-bubble {
-  background: hsl(var(--primary)) !important;
-  color: white !important;
-}
-
-.dark .str-chat__message--me .str-chat__message-text,
-.dark .str-chat__message--me .str-chat__message-text p {
-  color: white !important;
-}
-
-/* Chat bubbles - Add visible backgrounds */
-.dark .str-chat__message-bubble,
-.dark .str-chat__message-text-inner,
-.dark .str-chat__message-simple-text-inner,
-.dark [class*="str-chat__message-text"] {
-  background: #374151 !important;
-  border-radius: 8px !important;
-  padding: 6px 10px !important;
-}
-
-/* User's own messages - primary color bubble */
-.dark .str-chat__message--me .str-chat__message-bubble,
-.dark .str-chat__message--me .str-chat__message-text-inner,
-.dark .str-chat__message--me .str-chat__message-simple-text-inner,
-.dark .str-chat__message--me [class*="str-chat__message-text"] {
-  background: hsl(var(--primary)) !important;
-}
-
-/* Message list container */
-.dark .str-chat__list,
-.dark .str-chat__message-list {
-  background: transparent !important;
-}
-
-/* Input area */
-.dark .str-chat__message-input {
-  background: hsl(var(--card)) !important;
-  border-top: 1px solid hsl(var(--border)) !important;
-}
-
-.dark .str-chat__input-flat {
-  background: hsl(var(--input)) !important;
-  border-color: hsl(var(--border)) !important;
-}
-
-.dark .str-chat__textarea textarea {
-  background: transparent !important;
-  color: hsl(var(--foreground)) !important;
-}
-
-.dark .str-chat__textarea textarea::placeholder {
-  color: hsl(var(--muted-foreground)) !important;
-}
-
-/* Send button */
-.dark .str-chat__send-button {
-  background: hsl(var(--primary)) !important;
-  color: white !important;
-}
-
-/* Timestamps and metadata */
-.dark .str-chat__message-data,
-.dark .str-chat__message-timestamp {
-  color: hsl(var(--muted-foreground)) !important;
-}
-
-/* Avatar */
-.dark .str-chat__avatar {
-  background: hsl(var(--muted)) !important;
-}
-
-/* Scroll fix - let Stream Chat handle its own scrolling */
-.str-chat__list {
-  height: 100% !important;
-  max-height: none !important;
-}
-
-.str-chat__main-panel {
-  height: 100% !important;
-}
-
-/* Date separators */
-.dark .str-chat__date-separator-line {
-  background: hsl(var(--border)) !important;
-}
-
-.dark .str-chat__date-separator-date {
-  color: hsl(var(--muted-foreground)) !important;
-  background: hsl(var(--card)) !important;
-}
-
-/* FORCE all text in Stream Chat to be readable in dark mode */
-.dark .str-chat * {
-  color: inherit;
-}
-
-.dark .str-chat p,
-.dark .str-chat span,
-.dark .str-chat div {
-  color: #e5e5e5 !important;
-}
-
-/* Override for message content specifically */
-.dark .str-chat__message-text-inner,
-.dark .str-chat__message-simple-text-inner,
-.dark [class*="str-chat__message"] p,
-.dark [class*="str-chat__message"] span:not(.str-chat__message-timestamp) {
-  color: #ffffff !important;
-}
-
-/* Keep timestamps muted */
-.dark .str-chat__message-timestamp,
-.dark [class*="timestamp"] {
-  color: #888888 !important;
-}
-
-/* User messages - keep primary color styling */
-.dark .str-chat__message--me [class*="text-inner"],
-.dark .str-chat__message--me p {
-  color: #ffffff !important;
 }
